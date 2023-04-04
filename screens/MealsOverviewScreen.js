@@ -24,13 +24,14 @@ function MealsOverviewScreen({ route, navigation }) {
   function renderMealItem(itemData) {
     const item = itemData.item;
     const mealsItemProps = {
+      id:item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       affordability: item.affordability,
       complexity: item.complexity,
       duration: item.duration,
     };
-    return <MealItem {...mealsItemProps} />;
+    return <MealItem {...mealsItemProps}/>;
   }
 
   return (
